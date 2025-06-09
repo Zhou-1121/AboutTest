@@ -1,0 +1,6 @@
+在Cutie（Cutie-main）文件下，其实就是cutie官方下载
+Cutie
+	小cutie
+	weights（加）
+	scripts
+	....
