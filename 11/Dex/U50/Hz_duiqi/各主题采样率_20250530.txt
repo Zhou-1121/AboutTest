@@ -1,0 +1,95 @@
+ARM_TOPIC   = '/hdas/feedback_arm_right'            166-167HZ
+HAND_TOPIC  = '/hdas/feedback_gripper_right'            40HZ
+HEAD_TOPIC  = '/hdas/camera_head/left_raw/image_raw_color/compressed'  10HZ     
+WRIST_TOPIC = '/hdas/camera_wrist_right/color/image_raw/compressed'    15HZ
+
+
+
+samsung@samsung-Alienware-Area-51m:~/qingwen/Hz_duiqi$ python read_hz.py /home/samsung/qingwen/Hz_duiqi/None_20250430205806026_RAW.bag
+bag 时长: 15.867 s, 话题数: 38
+
+话题名称                                                              消息数   频率 (Hz)
+--------------------------------------------------------------------------------
+/controller                                                      3187      200.86
+/hdas/bms                                                          31        1.95
+/hdas/camera_head/depth/depth_registered                          168       10.59
+/hdas/camera_head/left_raw/image_raw_color/compressed             168       10.59
+/hdas/camera_head/right_raw/image_raw_color/compressed            168       10.59
+/hdas/camera_wrist_right/aligned_depth_to_color/image_raw         240       15.13
+/hdas/camera_wrist_right/color/image_raw/compressed               239       15.06
+/hdas/feedback_arm_left                                          2656      167.40
+/hdas/feedback_arm_right                                         2652      167.14
+/hdas/feedback_chassis                                           3186      200.80
+/hdas/feedback_gripper_left                                      2654      167.27
+/hdas/feedback_gripper_right                                      639       40.27
+/hdas/feedback_status_arm_left                                     16        1.01
+/hdas/feedback_status_arm_right                                    16        1.01
+/hdas/feedback_status_torso                                        16        1.01
+/hdas/feedback_torso                                             7941      500.49
+/hdas/imu_chassis                                                1588      100.08
+/hdas/imu_torso                                                  1587      100.02
+/motion_control/chassis_speed                                     796       50.17
+/motion_control/control_arm_left                                 3281      206.79
+/motion_control/control_arm_right                                5330      335.93
+/motion_control/control_chassis                                   790       49.79
+/motion_control/control_torso                                    1510       95.17
+/motion_control/pose_ee_arm_left                                 2628      165.63
+/motion_control/pose_ee_arm_left_planning                        3255      205.15
+/motion_control/pose_ee_arm_right                                2615      164.81
+/motion_control/pose_ee_arm_right_planning                       5327      335.74
+/motion_control/pose_floating_base                               7860      495.38
+/motion_control/pose_floating_base_planning                      1509       95.11
+/motion_target/target_joint_state_arm_left                       1577       99.39
+/motion_target/target_joint_state_arm_right                      1578       99.45
+/motion_target/target_pose_arm_left                               145        9.14
+/motion_target/target_pose_arm_right                              144        9.08
+/motion_target/target_position_gripper_left                       145        9.14
+/motion_target/target_position_gripper_right                      144        9.08
+/motion_target/target_speed_chassis                               285       17.96
+/tf_static                                                          3        0.19
+/vr_pose                                                          218       13.74
+
+
+samsung@samsung-Alienware-Area-51m:~/qingwen/Hz_duiqi$ python read_hz.py /home/samsung/qingwen/Hz_duiqi/None_20250430210453852_RAW.bag
+bag 时长: 13.666 s, 话题数: 38
+
+话题名称                                                              消息数   频率 (Hz)
+--------------------------------------------------------------------------------
+/controller                                                      2722      199.17
+/hdas/bms                                                          28        2.05
+/hdas/camera_head/depth/depth_registered                          161       11.78
+/hdas/camera_head/left_raw/image_raw_color/compressed             162       11.85
+/hdas/camera_head/right_raw/image_raw_color/compressed            161       11.78
+/hdas/camera_wrist_right/aligned_depth_to_color/image_raw         205       15.00
+/hdas/camera_wrist_right/color/image_raw/compressed               205       15.00
+/hdas/feedback_arm_left                                          2262      165.52
+/hdas/feedback_arm_right                                         2269      166.03
+/hdas/feedback_chassis                                           2711      198.37
+/hdas/feedback_gripper_left                                      2261      165.44
+/hdas/feedback_gripper_right                                      591       43.24
+/hdas/feedback_status_arm_left                                     13        0.95
+/hdas/feedback_status_arm_right                                    13        0.95
+/hdas/feedback_status_torso                                        13        0.95
+/hdas/feedback_torso                                             6785      496.47
+/hdas/imu_chassis                                                1353       99.00
+/hdas/imu_torso                                                  1354       99.08
+/motion_control/chassis_speed                                     682       49.90
+/motion_control/control_arm_left                                 2841      207.88
+/motion_control/control_arm_right                                4756      348.01
+/motion_control/control_chassis                                   681       49.83
+/motion_control/control_torso                                    1290       94.39
+/motion_control/pose_ee_arm_left                                 2241      163.98
+/motion_control/pose_ee_arm_left_planning                        2815      205.98
+/motion_control/pose_ee_arm_right                                2242      164.05
+/motion_control/pose_ee_arm_right_planning                       4709      344.57
+/motion_control/pose_floating_base                               6718      491.57
+/motion_control/pose_floating_base_planning                      1290       94.39
+/motion_target/target_joint_state_arm_left                       1348       98.64
+/motion_target/target_joint_state_arm_right                      1348       98.64
+/motion_target/target_pose_arm_left                               137       10.02
+/motion_target/target_pose_arm_right                              136        9.95
+/motion_target/target_position_gripper_left                       137       10.02
+/motion_target/target_position_gripper_right                      136        9.95
+/motion_target/target_speed_chassis                               273       19.98
+/tf_static                                                          3        0.22
+/vr_pose                                                          187       13.68
