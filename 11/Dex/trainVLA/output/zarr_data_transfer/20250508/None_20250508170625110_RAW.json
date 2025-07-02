@@ -1,0 +1,31 @@
+{
+    "robot_info": {
+        "robot_name": null,
+        "robot_serial_number": null
+    },
+    "project_info": {
+        "project_name": ""
+    },
+    "operation_info": {
+        "teleoperation_type": "",
+        "location": "",
+        "operator_name": ""
+    },
+    "task_info": {
+        "task_owner": "",
+        "task_name": ""
+    },
+    "disable_uploading": true,
+    "package_info": {
+        "package_name": "atc_standard-V1.1.8-20250506_22_31_45.tar.gz",
+        "package_branch": "test/v1.1.8",
+        "package_commit": "e90b16f99977df888ad08aa625d578648caeccff"
+    },
+    "bag_info": {
+        "bag_name": "None_20250508170625110_RAW.bag",
+        "bag_length_seconds": 13.86,
+        "digest": "e8bff51cf55e212539ac31428552c6d5",
+        "bag_size_mb": 145.77,
+        "created_time": "2025-05-08-17:06:25"
+    }
+}
