@@ -1,0 +1,149 @@
+nvidia@nvidia-desktop:~$ rostopic echo /hdas/feedback_status_torso 
+header: 
+  seq: 1634
+  stamp: 
+    secs: 1744712057
+    nsecs: 854835872
+  frame_id: ''
+name_id: "TORSO_ERROR"
+errors: 
+  - 
+    name: "w1"
+    error_code: 0
+    error_description: []
+  - 
+    name: "w2"
+    error_code: 8192
+    error_description: 
+      - BOARD_OVER_TEMPERATURE
+  - 
+    name: "w3"
+    error_code: 0
+    error_description: []
+  - 
+    name: "w4"
+    error_code: 0
+    error_description: []
+
+rostopic echo /hdas/feedback_torso
+header: 
+  seq: 879163
+  stamp: 
+    secs: 1744712174
+    nsecs: 769704416
+  frame_id: ''
+name: 
+  - torso
+position: [0.005499999970197678, -0.010400000028312206, -0.0017000000225380063, -9.999999747378752e-05]
+velocity: [0.0023333332501351833, 0.0023333332501351833, -0.0023333332501351833, 0.0023333332501351833]
+effort: [5.578333377838135, 10.5600004196167, -3.5766665935516357, 0.13333334028720856]
+---
+header: 
+  seq: 879164
+  stamp: 
+    secs: 1744712174
+    nsecs: 770799488
+  frame_id: ''
+name: 
+  - torso
+position: [0.005499999970197678, -0.010400000028312206, -0.0017000000225380063, -9.999999747378752e-05]
+velocity: [0.0023333332501351833, 0.0023333332501351833, 0.0023333332501351833, 0.0023333332501351833]
+effort: [5.554999828338623, 10.5600004196167, -3.5766665935516357, 0.18166667222976685]
+
+
+rostopic echo /hdas/feedback_status_arm_left
+header: 
+  seq: 1514
+  stamp: 
+    secs: 1744711937
+    nsecs: 370799232
+  frame_id: ''
+name_id: "LEFT_ARM_ERROR"
+errors: 
+  - 
+    name: "arm_joint1"
+    error_code: 20
+    error_description: 
+      - POS_JUMP
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint2"
+    error_code: 18
+    error_description: 
+      - DISCONNECT
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint3"
+    error_code: 18
+    error_description: 
+      - DISCONNECT
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint4"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint5"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint6"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint7"
+    error_code: 18
+    error_description: 
+      - DISCONNECT
+      - RECEIVE_TIMEOUT
+      
+      
+      
+rostopic echo /hdas/feedback_status_arm_right
+header: 
+  seq: 1472
+  stamp: 
+    secs: 1744711895
+    nsecs: 199899936
+  frame_id: ''
+name_id: "RIGHT_ARM_ERROR"
+errors: 
+  - 
+    name: "arm_joint1"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint2"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint3"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint4"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint5"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint6"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+  - 
+    name: "arm_joint7"
+    error_code: 16
+    error_description: 
+      - RECEIVE_TIMEOUT
+---

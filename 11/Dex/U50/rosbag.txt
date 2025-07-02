@@ -1,0 +1,136 @@
+samsung@samsung-Alienware-Area-51m:~/yixiang/GalaxeaDataset/20250508$ ls
+None_20250508170625110_RAW.bag   None_20250508170646899_RAW.bag
+None_20250508170625110_RAW.json  None_20250508170646899_RAW.json
+samsung@samsung-Alienware-Area-51m:~/yixiang/GalaxeaDataset/20250508$ rosbag info None_20250508170625110_RAW.bag 
+path:         None_20250508170625110_RAW.bag
+version:      2.0
+duration:     13.9s
+start:        May 08 2025 17:06:26.89 (1746695186.89)
+end:          May 08 2025 17:06:40.75 (1746695200.75)
+size:         145.8 MB
+messages:     66083
+compression:  lz4 [145/145 chunks; 93.56%]
+uncompressed: 154.6 MB @ 11.2 MB/s
+compressed:   144.6 MB @ 10.4 MB/s (93.56%)
+types:        geometry_msgs/PoseStamped          [d3812c3cbc69362b77dc0b19b345f8f5]
+              geometry_msgs/TwistStamped         [98d34b0043a2093cf9d9345ab6eef12e]
+              hdas_msg/bms                       [67510a0011fd924169d84e754f550505]
+              hdas_msg/controller_signal_stamped [9f3c78c4e4c0f9ec5baa690b438713b9]
+              hdas_msg/feedback_status           [7a6984c65a4a87fe80ef0491240438e9]
+              hdas_msg/motor_control             [76f26ea10e82a40ac9f0b5a1eee1c048]
+              sensor_msgs/CompressedImage        [8f7a12909da2c9d3332d540a0977563f]
+              sensor_msgs/Image                  [060021388200f6f0f447d0fcd9c64743]
+              sensor_msgs/Imu                    [6a62c6daae103f4ff57a132d6f95cec2]
+              sensor_msgs/JointState             [3066dcd76a6cfaef579bd0f34173e9fd]
+              tf2_msgs/TFMessage                 [94810edda583a504dfda3829e70d7eec]
+              vr_teleoperation_msg/VrPose        [274983569fc8cf11d2feed8560789d7b]
+topics:       /controller                                              2772 msgs    : hdas_msg/controller_signal_stamped
+              /hdas/bms                                                  28 msgs    : hdas_msg/bms                      
+              /hdas/camera_head/depth/depth_registered                  142 msgs    : sensor_msgs/Image                 
+              /hdas/camera_head/left_raw/image_raw_color/compressed     142 msgs    : sensor_msgs/CompressedImage       
+              /hdas/camera_head/right_raw/image_raw_color/compressed    142 msgs    : sensor_msgs/CompressedImage       
+              /hdas/feedback_arm_left                                  2304 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_arm_right                                 2299 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_chassis                                   2765 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_gripper_left                              2304 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_gripper_right                             2300 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_status_arm_left                             13 msgs    : hdas_msg/feedback_status          
+              /hdas/feedback_status_arm_right                            14 msgs    : hdas_msg/feedback_status          
+              /hdas/feedback_status_torso                                14 msgs    : hdas_msg/feedback_status          
+              /hdas/feedback_torso                                     6912 msgs    : sensor_msgs/JointState            
+              /hdas/imu_chassis                                        1378 msgs    : sensor_msgs/Imu                   
+              /hdas/imu_torso                                          1378 msgs    : sensor_msgs/Imu                   
+              /motion_control/chassis_speed                             691 msgs    : geometry_msgs/TwistStamped        
+              /motion_control/control_arm_left                         4881 msgs    : hdas_msg/motor_control            
+              /motion_control/control_arm_right                        4810 msgs    : hdas_msg/motor_control            
+              /motion_control/control_chassis                           690 msgs    : hdas_msg/motor_control            
+              /motion_control/control_gripper_left                     1381 msgs    : hdas_msg/motor_control            
+              /motion_control/control_gripper_right                    1381 msgs    : hdas_msg/motor_control            
+              /motion_control/control_torso                            1320 msgs    : hdas_msg/motor_control            
+              /motion_control/pose_ee_arm_left                         2303 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_ee_arm_left_planning                4876 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_ee_arm_right                        2277 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_ee_arm_right_planning               4757 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_floating_base                       6751 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_floating_base_planning              1309 msgs    : geometry_msgs/PoseStamped         
+              /motion_target/target_joint_state_arm_left               1368 msgs    : sensor_msgs/JointState            
+              /motion_target/target_joint_state_arm_right              1369 msgs    : sensor_msgs/JointState            
+              /motion_target/target_pose_arm_left                       136 msgs    : geometry_msgs/PoseStamped         
+              /motion_target/target_pose_arm_right                      135 msgs    : geometry_msgs/PoseStamped         
+              /motion_target/target_position_gripper_left               136 msgs    : sensor_msgs/JointState            
+              /motion_target/target_position_gripper_right              135 msgs    : sensor_msgs/JointState            
+              /motion_target/target_speed_chassis                       271 msgs    : geometry_msgs/TwistStamped        
+              /tf_static                                                  2 msgs    : tf2_msgs/TFMessage                 (2 connections)
+              /vr_pose                                                  197 msgs    : vr_teleoperation_msg/VrPose
+
+
+启动录制
+rosbag record -O /home/dataset/hand_$(date +%Y%m%d%H%M%S%3N)_RAW /hand/angle_actual
+
+
+samsung@samsung-Alienware-Area-51m:~/qingwen/scripts$ rosbag info None_2025043022
+None_20250430223934664_RAW.bag
+None_20250430224140020_RAW.bag
+samsung@samsung-Alienware-Area-51m:~/qingwen/scripts$ rosbag info None_20250430223934664_RAW.bag 
+path:         None_20250430223934664_RAW.bag
+version:      2.0
+duration:     29.9s
+start:        Apr 30 2025 22:39:36.85 (1746023976.85)
+end:          Apr 30 2025 22:40:06.73 (1746024006.73)
+size:         1.1 GB
+messages:     126978
+compression:  lz4 [817/817 chunks; 69.15%]
+uncompressed: 1.6 GB @ 55.4 MB/s
+compressed:   1.1 GB @ 38.3 MB/s (69.15%)
+types:        geometry_msgs/PoseStamped          [d3812c3cbc69362b77dc0b19b345f8f5]
+              geometry_msgs/TwistStamped         [98d34b0043a2093cf9d9345ab6eef12e]
+              hdas_msg/bms                       [67510a0011fd924169d84e754f550505]
+              hdas_msg/controller_signal_stamped [9f3c78c4e4c0f9ec5baa690b438713b9]
+              hdas_msg/feedback_status           [7a6984c65a4a87fe80ef0491240438e9]
+              hdas_msg/motor_control             [76f26ea10e82a40ac9f0b5a1eee1c048]
+              sensor_msgs/CompressedImage        [8f7a12909da2c9d3332d540a0977563f]
+              sensor_msgs/Image                  [060021388200f6f0f447d0fcd9c64743]
+              sensor_msgs/Imu                    [6a62c6daae103f4ff57a132d6f95cec2]
+              sensor_msgs/JointState             [3066dcd76a6cfaef579bd0f34173e9fd]
+              tf2_msgs/TFMessage                 [94810edda583a504dfda3829e70d7eec]
+              vr_teleoperation_msg/VrPose        [274983569fc8cf11d2feed8560789d7b]
+topics:       /controller                                                  5942 msgs    : hdas_msg/controller_signal_stamped
+              /hdas/bms                                                      59 msgs    : hdas_msg/bms                      
+              /hdas/camera_head/depth/depth_registered                      289 msgs    : sensor_msgs/Image                 
+              /hdas/camera_head/left_raw/image_raw_color/compressed         288 msgs    : sensor_msgs/CompressedImage       
+              /hdas/camera_head/right_raw/image_raw_color/compressed        289 msgs    : sensor_msgs/CompressedImage       
+              /hdas/camera_wrist_left/aligned_depth_to_color/image_raw      445 msgs    : sensor_msgs/Image                 
+              /hdas/camera_wrist_left/color/image_raw/compressed            445 msgs    : sensor_msgs/CompressedImage       
+              /hdas/camera_wrist_right/aligned_depth_to_color/image_raw     447 msgs    : sensor_msgs/Image                 
+              /hdas/camera_wrist_right/color/image_raw/compressed           447 msgs    : sensor_msgs/CompressedImage       
+              /hdas/feedback_arm_left                                      4937 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_arm_right                                     4937 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_chassis                                       5935 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_gripper_left                                  4951 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_gripper_right                                 1309 msgs    : sensor_msgs/JointState            
+              /hdas/feedback_status_arm_left                                 30 msgs    : hdas_msg/feedback_status          
+              /hdas/feedback_status_arm_right                                30 msgs    : hdas_msg/feedback_status          
+              /hdas/feedback_status_torso                                    30 msgs    : hdas_msg/feedback_status          
+              /hdas/feedback_torso                                        14837 msgs    : sensor_msgs/JointState            
+              /hdas/imu_chassis                                            2972 msgs    : sensor_msgs/Imu                   
+              /hdas/imu_torso                                              2966 msgs    : sensor_msgs/Imu                   
+              /motion_control/chassis_speed                                1484 msgs    : geometry_msgs/TwistStamped        
+              /motion_control/control_arm_left                             6284 msgs    : hdas_msg/motor_control            
+              /motion_control/control_arm_right                           10582 msgs    : hdas_msg/motor_control            
+              /motion_control/control_chassis                              1491 msgs    : hdas_msg/motor_control            
+              /motion_control/control_torso                                2835 msgs    : hdas_msg/motor_control            
+              /motion_control/pose_ee_arm_left                             4952 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_ee_arm_left_planning                    6284 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_ee_arm_right                            4944 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_ee_arm_right_planning                  10583 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_floating_base                          14832 msgs    : geometry_msgs/PoseStamped         
+              /motion_control/pose_floating_base_planning                  2835 msgs    : geometry_msgs/PoseStamped         
+              /motion_target/target_joint_state_arm_left                   2960 msgs    : sensor_msgs/JointState            
+              /motion_target/target_joint_state_arm_right                  2959 msgs    : sensor_msgs/JointState            
+              /motion_target/target_pose_arm_left                           326 msgs    : geometry_msgs/PoseStamped         
+              /motion_target/target_pose_arm_right                          325 msgs    : geometry_msgs/PoseStamped         
+              /motion_target/target_position_gripper_left                   326 msgs    : sensor_msgs/JointState            
+              /motion_target/target_position_gripper_right                  325 msgs    : sensor_msgs/JointState            
+              /motion_target/target_speed_chassis                           651 msgs    : geometry_msgs/TwistStamped        
+              /tf_static                                                      4 msgs    : tf2_msgs/TFMessage                 (4 connections)
+              /vr_pose                                                      411 msgs    : vr_teleoperation_msg/VrPose

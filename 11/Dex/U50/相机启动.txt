@@ -1,0 +1,38 @@
+（1） source 好 Galaxea SDK 环境并启动了 ROS Master（roscore）后，运行：
+
+roslaunch signal_camera signal_camera.launch
+
+就会启动 signal_camera_node，它会：
+1.读取 signal_camera 包里预先配置好的所有相机参数（分辨率、帧率、校准文件路径等），
+2.建立到各个物理相机的连接，
+3.把所有相机的数据按命名空间发布到 ROS 话题，包括头部相机：
+ /hdas/camera_head/left_raw/image_raw_color/compressed （sensor_msgs/CompressedImage）
+ /hdas/camera_head/depth/depth_registered    （sensor_msgs/Image）
+
+（2）
+检查节点是否在跑
+rosnode list | grep signal_camera
+# 应该能看到 /signal_camera
+
+查看发布的话题
+rostopic list | grep camera_head
+# /hdas/camera_head/left_raw/image_raw_color/compressed
+# /hdas/camera_head/depth/depth_registered
+
+（3）打印消息示例
+RGB 压缩图：
+rostopic echo /hdas/camera_head/left_raw/image_raw_color/compressed -n1
+深度图：
+rostopic echo /hdas/camera_head/depth/depth_registered -n1
+
+（4）可视化
+ 彩色压缩图：
+rosrun image_view image_view \
+  image:=/hdas/camera_head/left_raw/image_raw_color/compressed \
+  _image_transport:=compressed
+
+深度图：
+rosrun image_view image_view \
+image:=/hdas/camera_head/depth/depth_registered
+
+如果需要修改分辨率、帧率或只启动头部相机，可以在 signal_camera 包下找到对应的参数文件（通常在 config/ 目录内），然后在 signal_camera.launch 里通过 <rosparam> 或 <param> 标签覆写它们。这样就可以按需裁剪只跑头部相机节点。
