@@ -1,0 +1,14 @@
+/data/dingzher/DexGrasp_Demo/data/outputs/train_dexgraspvla_controller_id_1/train_dexgraspvla_controller_id_1_train_dexgraspvla_controller_grasp：
+
+logs.json.txt  normalizer.pkl  tensorboard_log_dir文件夹  train.log
+
+
+tensorboard_log_dir/train_dexgraspvla_controller文件夹内容：
+events.out.tfevents.1747819298.samsung-Precision-7960-Tower.3557734.0  events.out.tfevents.1747820446.samsung-Precision-7960-Tower.3573592.0
+events.out.tfevents.1747819513.samsung-Precision-7960-Tower.3560201.0  events.out.tfevents.1747820525.samsung-Precision-7960-Tower.3575270.0
+events.out.tfevents.1747820052.samsung-Precision-7960-Tower.3565614.0  events.out.tfevents.1747820651.samsung-Precision-7960-Tower.3578018.0
+events.out.tfevents.1747820093.samsung-Precision-7960-Tower.3566565.0  events.out.tfevents.1747820761.samsung-Precision-7960-Tower.3580720.0
+events.out.tfevents.1747820234.samsung-Precision-7960-Tower.3568713.0  events.out.tfevents.1747820805.samsung-Precision-7960-Tower.3582022.0
+events.out.tfevents.1747820268.samsung-Precision-7960-Tower.3569676.0  events.out.tfevents.1747820970.samsung-Precision-7960-Tower.3585548.0
+events.out.tfevents.1747820326.samsung-Precision-7960-Tower.3570767.0  events.out.tfevents.1747821104.samsung-Precision-7960-Tower.3588615.0
+events.out.tfevents.1747820387.samsung-Precision-7960-Tower.3572070.0  events.out.tfevents.1747821967.samsung-Precision-7960-Tower.3605411.0
